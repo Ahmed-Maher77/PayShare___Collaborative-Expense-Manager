@@ -1,36 +1,161 @@
-# React + Vite
+# PayShare – Collaborative Expense Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**PayShare is a modern expense-sharing web application that simplifies bill splitting, debt tracking, and friend expense management through intelligent calculations, real-time balance updates, persistent local storage, and a clean, intuitive user experience.**
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Live Preview
 
-## React Compiler
+👀 **Watch Live Preview:** <a href="https://Ahmed-Maher77.github.io/PayShare___Collaborative-Expense-Manager/" target="_blank">https://Ahmed-Maher77.github.io/PayShare\_\_\_Collaborative-Expense-Manager</a>
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## 📸 Website Preview
 
-## Expanding the ESLint configuration
+<a href="https://Ahmed-Maher77.github.io/PayShare___Collaborative-Expense-Manager/" title="demo">
+  <img src="uploaded-img-on-github-readme" alt="website preview - Demo - UI Mockup" width="400">
+</a>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
 
-## Deploy To GitHub Pages
+## 💻 Used Technologies
 
-This project is configured for GitHub Pages using the repository path `/eat-n-split/`.
+- **React:** Component-based UI development and state management using hooks.
+- **Vite:** Fast development server and optimized production builds.
+- **JavaScript (ES6+):** Core application logic and interactive features.
+- **HTML5:** Semantic structure and accessibility support.
+- **CSS3:** Responsive design and modern UI styling.
+- **localStorage API:** Client-side persistence for storing users and expenses.
+- **ESLint:** Code linting for consistent quality and best practices.
+- **gh-pages:** Deployment of production build to GitHub Pages.
 
-Install the deploy helper if needed:
+---
+
+## ✨ Key Features
+
+- **Friend Management:** Add friends with profile images and manage their data.
+- **Bill Splitting:** Easily split bills and calculate individual shares.
+- **Debt Tracking:** Track who owes whom in real time.
+- **Persistent Storage:** Automatically saves all data in localStorage.
+- **Dynamic UI:** Smooth form interactions with expand/collapse behavior.
+- **Input Validation:** Ensures accurate and safe expense calculations.
+- **Responsive Design:** Optimized for all screen sizes and devices.
+- **Production Deployment:** Ready for GitHub Pages hosting.
+
+---
+
+## 🏗️ Best Practices & Standards Followed
+
+### ⚡ Performance Optimization
+
+- Optimized build process using Vite.
+- Minimized unnecessary re-renders through component separation.
+- Uses targeted memoization and the React Compiler for scalable performance improvements.
+- Efficient asset handling for faster load times.
+
+### ♿ Accessibility
+
+- Semantic HTML structure for better screen reader support.
+- ARIA attributes for interactive components.
+- Keyboard navigation support across the application.
+- Clear focus states for improved usability.
+
+### 🔒 Security
+
+- Validation of user inputs and external image URLs.
+- Safe handling of dynamic user-provided data.
+
+### 🧩 Code Quality & Architecture
+
+- Modular and reusable component-based structure.
+- Separation of UI and business logic.
+- Clean and maintainable project organization.
+- ESLint enforcement for consistent coding standards.
+
+### 🌍 SEO & Web Standards
+
+- Semantic and accessible markup.
+- Optimized metadata structure for better sharing.
+- Responsive design aligned with modern web standards.
+
+### 🚀 Deployment & Tooling
+
+- Automated deployment using GitHub Pages.
+- Vite-based modern build pipeline.
+- Production-ready configuration.
+
+---
+
+## 📥 Installation Instructions for Local Setup
+
+### Clone Repository
+
+```bash
+git clone https://github.com/Ahmed-Maher77/PayShare___Collaborative-Expense-Manager.git
+```
+
+### Navigate to Project Directory
+
+```bash
+cd PayShare___Collaborative-Expense-Manager
+```
+
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
-Deploy with:
+### Start Development Server
 
 ```bash
-npm run deploy
+npm run dev
 ```
 
-The deploy script builds the app first and publishes the `dist` folder to the `gh-pages` branch.
+---
+
+## 📁 Project Structure
+
+```txt
+payshare/
+│
+├── public/                 # Static assets
+├── src/
+│   ├── assets/             # Images and dummy data
+│   ├── components/         # Reusable UI components
+│   │   ├── AddFriend/      # Friend creation feature
+│   │   ├── FriendsList/    # Friends display & selection
+│   │   ├── SplitBill/      # Bill splitting logic
+│   │   ├── UI/             # Shared UI components
+│   │   └── icons/          # SVG icons
+│   │
+│   ├── App.jsx             # Root application component
+│   ├── App.css             # App-specific styles
+│   ├── main.jsx            # Application entry point
+│   └── index.css           # Global styles
+│
+├── PROGRAM_FLOW.md         # Application flow documentation
+├── vite.config.js          # Vite configuration
+├── package.json            # Dependencies and scripts
+└── README.md               # Project documentation
+```
+
+---
+
+## 📚 Additional Documentation
+
+- [Program Flow](./PROGRAM_FLOW.md) - professional documentation covering application flow, architecture, UML views, state management, and data persistence.
+
+---
+
+## 📬 Contact
+
+- 🧑‍💻 **Portfolio:** <a href="https://ahmedmaher-portfolio.vercel.app/" title="See My Portfolio">https://ahmedmaher-portfolio.vercel.app/</a>
+- 🔗 **LinkedIn:** <a href="https://www.linkedin.com/in/ahmed-maher-algohary" title="Contact via LinkedIn">https://www.linkedin.com/in/ahmed-maher-algohary</a>
+- 📧 **Email:** <a href="mailto:ahmedmaher.dev1@gmail.com" title="Contact via Email">ahmedmaher.dev1@gmail.com</a>
+
+---
+
+## ⭐ Support
+
+If you found this project helpful or inspiring, please consider giving it a ⭐. Your support helps me grow and share more open-source projects like this!
