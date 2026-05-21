@@ -104,6 +104,10 @@ form button {
     cursor: pointer;
     color: #ff6262;
     transition: color 0.3s ease;
+    background: transparent;
+    padding: 0 0;
+    border: none;
+    border-radius: 0;
 }
 .close-icon:hover {
     color: #ff0000;
