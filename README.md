@@ -13,7 +13,7 @@
 ## 📸 Website Preview
 
 <a href="https://Ahmed-Maher77.github.io/PayShare___Collaborative-Expense-Manager/" title="demo">
-  <img src="uploaded-img-on-github-readme" alt="website preview - Demo - UI Mockup" width="400">
+  <img src="https://github.com/user-attachments/assets/8c62daf7-2944-413b-8b34-76ab4e48992b" alt="website preview - Demo - UI Mockup" width="400">
 </a>
 
 ---
