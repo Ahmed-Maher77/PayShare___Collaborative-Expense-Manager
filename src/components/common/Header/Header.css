@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Bree+Serif&family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@100..900&family=Pacifico&family=Playwrite+DE+SAS:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 
 
 .App-Header {
@@ -16,15 +16,27 @@
 }
 
 .brand {
-  font-size: 2rem;
-  font-weight: 700;
   margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   letter-spacing: -0.5px;
-  color: #f97316;
-font-family: "Bree Serif", serif;
 }
 
-.brand span {
+.brand-logo {
+  width: 44px;
+  height: 44px;
+  display: block;
+}
+
+.brand-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f97316;
+  font-family: "Bree Serif", serif;
+}
+
+.brand-name span {
   color: #111827;
   margin-left: 4px;
   font-family: "Bree Serif", serif;
@@ -40,7 +52,16 @@ font-family: "Bree Serif", serif;
 
 /* Mobile */
 @media (max-width: 575px) {
+  .brand-logo {
+    width: 36px;
+    height: 36px;
+  }
+
   .brand {
+    font-size: 1.6rem;
+  }
+
+  .brand-name {
     font-size: 1.6rem;
   }
 
