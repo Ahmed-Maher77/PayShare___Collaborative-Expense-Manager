@@ -1,0 +1,174 @@
+.App {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    display: flex;
+    min-height: calc(100svh - 4rem);
+}
+
+/* ======== Friends-List styles ========= */
+.Friends-List {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 450px;
+}
+.Friends-ListItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 30px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+.Friends-ListItem:hover,
+.Friends-ListItem.selected {
+    background-color: #f3a10017;
+}
+.user-details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: 400;
+}
+.info h3 {
+    font-weight: 500;
+}
+.Friends-ListItem img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.Friends-ListItem p.oweToMe {
+    color: green;
+}
+.Friends-ListItem p.owesMe {
+    color: red;
+}
+.Friends-ListItem p.settledUp {
+    color: gray;
+}
+
+/* ======== AddFriendContainer styles ======== */
+.Add-Friend-Container {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+.Add-Friend-Container button {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+form {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-block: 20px 40px;
+    overflow: hidden;
+    transition:
+        height 0.3s ease,
+        opacity 0.3s ease,
+        padding 0.3s ease;
+}
+form.show {
+    height: 218px;
+}
+form button {
+    margin-top: 10px;
+    align-self: flex-start;
+}
+.add-icon {
+    width: 18px;
+    height: 18px;
+}
+.close-icon {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    color: #ff6262;
+    transition: color 0.3s ease;
+}
+.close-icon:hover {
+    color: #ff0000;
+}
+
+/* =========== SplitBillForm styles =========== */
+.Split-Bill-Form {
+    overflow: hidden;
+    transition: height 0.3s ease;
+    min-width: 450px;
+    background: #faebd7a1;
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin-top: 88px;
+}
+.Split-Bill-Form header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.Split-Bill-Form form {
+    margin-bottom: 0;
+}
+.Split-Bill-Form fieldset input,
+.Split-Bill-Form fieldset select,
+.Split-Bill-Form fieldset select option {
+    text-align: center;
+    width: 100px;
+}
+
+/* =========== Footer styles =========== */
+.Footer {
+    margin-top: 20px;
+    width: 100%;
+    padding: 40px 2rem 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    line-height: 1.5;
+}
+.Footer a {
+    color: #cb8600;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+.Footer a:hover {
+    color: #f3a100;
+    text-decoration: none;
+}
+
+@media (max-width: 575px) {
+    body {
+        padding: 1rem;
+    }
+    .info h3 {
+        font-size: 1rem;
+    }
+    .info p {
+        font-size: 0.85rem;
+    }
+    .Split-Bill-Form {
+        min-width: 100%;
+        margin-top: 0;
+    }
+}

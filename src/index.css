@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========= Global styles ========= */
+body {
+  font-family: 'Outfit', sans-serif;
+  padding: 2rem;
+  padding-bottom: 0;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+ul {
+  list-style: none;
+}
+button {
+  padding: 10px 15px;
+  background-color: #f3a100;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Outfit', sans-serif;
+}
+button:hover {
+  background-color: #d18e00;
+}
+fieldset {
+  border: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+fieldset label {
+  min-width: 95px
+}
+form input, form select {
+  padding: 11px 13px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+form input:focus, form select:focus {
+  border-color: #f3a100;
+}
+.Error {
+  color: red;
+  margin-top: 10px;
+}
+
+
+@media (max-width: 575px) {
+  fieldset {
+    flex-wrap: wrap;
+  }  
+}
