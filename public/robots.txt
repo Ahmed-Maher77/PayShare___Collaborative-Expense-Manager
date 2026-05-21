@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://Ahmed-Maher77.github.io/PayShare___Collaborative-Expense-Manager/sitemap.xml
