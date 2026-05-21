@@ -6,7 +6,7 @@
 
 ## 🌐 Live Preview
 
-👀 **Watch Live Preview:** <a href="https://Ahmed-Maher77.github.io/PayShare___Collaborative-Expense-Manager/" target="_blank">https://Ahmed-Maher77.github.io/PayShare\_\_\_Collaborative-Expense-Manager</a>
+👀 **Watch Live Preview:** <a href="https://Ahmed-Maher77.github.io/PayShare___Collaborative-Expense-Manager/" target="_blank">https://Ahmed-Maher77.github.io/PayShare\_\_\_Collaborative-Expense-Manager/</a>
 
 ---
 

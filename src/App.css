@@ -1,11 +1,18 @@
 .App {
-    flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
     gap: 40px;
     display: flex;
     min-height: calc(100svh - 4rem);
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 100%;
 }
 
 /* ======== Friends-List styles ========= */

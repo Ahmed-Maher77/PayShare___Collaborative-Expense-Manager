@@ -6,15 +6,41 @@ import DUMMY_USERS from "./assets/data/users";
 import SplitBillForm from "./components/SplitBillForm/SplitBillForm";
 import Loader from "./components/UI/Loader/Loader";
 import Footer from "./components/common/Footer/Footer";
+import Header from "./components/common/Header/Header";
+
+const LEGACY_ASSET_PATH_PATTERN = /^(\.?\/)?src\/assets\/images\/|^\/src\/assets\/images\/|^\.\.\/images\//;
+
+const normalizeStoredUsers = (storedUsers) => {
+    if (!Array.isArray(storedUsers) || storedUsers.length === 0) {
+        return DUMMY_USERS;
+    }
+
+    const dummyPictureById = new Map(DUMMY_USERS.map((user) => [user.id, user.picture]));
+
+    return storedUsers.map((user) => {
+        const hasValidPicture =
+            typeof user?.picture === "string" &&
+            user.picture.trim() &&
+            !LEGACY_ASSET_PATH_PATTERN.test(user.picture.trim());
+
+        return {
+            ...user,
+            picture: hasValidPicture
+                ? user.picture.trim()
+                : dummyPictureById.get(user.id) || user.picture,
+        };
+    });
+};
 
 function App() {
-    // load users data
-    const storedUsers = localStorage.getItem("users");
-    const [users, setUsers] = useState(JSON.parse(storedUsers) || DUMMY_USERS);
-
-    if (!storedUsers) {
-        localStorage.setItem("users", JSON.stringify(DUMMY_USERS));
-    }
+    const [users, setUsers] = useState(() => {
+        try {
+            const storedUsers = JSON.parse(localStorage.getItem("users") || "null");
+            return normalizeStoredUsers(storedUsers);
+        } catch {
+            return DUMMY_USERS;
+        }
+    });
 
     const [formData, setFormData] = useState({
         pictureUrl: "https://i.pravatar.cc/150?u=",
@@ -32,6 +58,10 @@ function App() {
         return () => clearTimeout(timer);
     }, []);
 
+    useEffect(() => {
+        localStorage.setItem("users", JSON.stringify(users));
+    }, [users]);
+
     // handle submit new Friend
     const handleSubmitNewFriend = (e) => {
         e.preventDefault();
@@ -47,7 +77,6 @@ function App() {
             currency: "USD",
         };
         const updatedUsers = [...users, newFriend];
-        localStorage.setItem("users", JSON.stringify(updatedUsers));
         setUsers(updatedUsers);
         setFormData({
             pictureUrl: "https://i.pravatar.cc/150?u=",
@@ -79,28 +108,31 @@ function App() {
 
     return (
         <div className="App">
-            <section className="Friends-Container">
-                <AddFriendContainer
-                    formData={formData}
-                    setFormData={setFormData}
-                    onAddFriend={handleSubmitNewFriend}
-                    showForm={showForm}
-                    setShowForm={setShowForm}
-                />
-                <FriendsList
-                    users={users}
-                    onUpdateDebt={handleUpdateDebt}
-                    selectedFriendId={selectedUser?.id}
-                />
-            </section>
-            {selectedUser && (
-                <SplitBillForm
-                    selectedUser={selectedUser}
-                    setSelectedUser={setSelectedUser}
-                    users={users}
-                    setUsers={setUsers}
-                />
-            )}
+            <Header />
+            <main>
+                <section className="Friends-Container">
+                    <AddFriendContainer
+                        formData={formData}
+                        setFormData={setFormData}
+                        onAddFriend={handleSubmitNewFriend}
+                        showForm={showForm}
+                        setShowForm={setShowForm}
+                    />
+                    <FriendsList
+                        users={users}
+                        onUpdateDebt={handleUpdateDebt}
+                        selectedFriendId={selectedUser?.id}
+                    />
+                </section>
+                {selectedUser && (
+                    <SplitBillForm
+                        selectedUser={selectedUser}
+                        setSelectedUser={setSelectedUser}
+                        users={users}
+                        setUsers={setUsers}
+                    />
+                )}
+            </main>
             <Footer />
         </div>
     );
